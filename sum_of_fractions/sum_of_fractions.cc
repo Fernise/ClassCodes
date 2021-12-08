@@ -30,9 +30,9 @@ void CalculateSumOfFractions(const double kPrimerNumero, double kSegundoNumero, 
 int main() {
   // std::cout << "Este programa lee triples de tres números y para cada uno calcula el resultado de (1/a) + (1/a+k) + (1/a+2K)" << std::endl;
   // std::cout << "Introduzca un número natural: ";
-  for (int i = 0; i < 4; ++i) {
-    double primer_numero = 0;
-    std::cin >> primer_numero;
+  //for (int i = 0; i < 4; ++i) {
+  double primer_numero = 0;  
+  while (std::cin >> primer_numero) {
     double segundo_numero = 0;
     std::cin >> segundo_numero;
     double tercer_numero = 0;

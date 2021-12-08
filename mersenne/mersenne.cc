@@ -4,15 +4,17 @@
 #include "calculatemersenne.cc"
 
 
-int main(int argc, char *argv[]) {
-   std::string parameter = argv[1]; 
+int main(int argc, char *argv[]) { 
   if (argc == 1) {
     std::cout << "mersenne: falta un número natural como parámetro" << std::endl;
     std::cout << "Pruebe 'mersenne --help' para más información." << std::endl;
-    return 1;
+    return 0;
   }
+  std::string parameter = argv[1];
   if (parameter == "--help") {
     std::cout << "Este programa muestra una cantidad determinada de números primos de Mersenne" << std::endl;
+    std::cout << "Introduzca la cantidad de la siguiente manera: 'mersenne 4'" << std::endl;
+    return 0;
   }
   int parameter2 = std::stoi(argv[1]);
   int auxiliar = parameter2;

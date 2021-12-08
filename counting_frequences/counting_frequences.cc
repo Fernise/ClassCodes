@@ -16,9 +16,8 @@ void OrderSeries(std::vector<int>& numbers_serie, const int kSerieLength) {
   return;
 }
 
-
-
 void TimesRepeated(std::vector<int>& numbers_serie, const int kSerieLength) {
+  OrderSeries(numbers_serie, kSerieLength);
   for (int i = 0; i < kSerieLength; ++i) {
     int contador = 0;
     for (int j = 0; j < kSerieLength; ++j) {
@@ -47,7 +46,6 @@ int main() {
     for (int i = 0; i < serie_length; ++i) {
       std::cin >> numbers_serie[i]; 
     }
-    OrderSeries(numbers_serie, serie_length);
     TimesRepeated(numbers_serie, serie_length);  
   }
 
