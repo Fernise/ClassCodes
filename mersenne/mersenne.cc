@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
-#include "funciones.h"
+// #include "calculatemersenne.h"
+#include "calculatemersenne.cc"
 
 
 int main(int argc, char *argv[]) {
-  // int amount_primes = 0;
-  std::string parameter = argv[1]; 
+   std::string parameter = argv[1]; 
   if (argc == 1) {
     std::cout << "mersenne: falta un número natural como parámetro" << std::endl;
     std::cout << "Pruebe 'mersenne --help' para más información." << std::endl;
@@ -15,43 +15,33 @@ int main(int argc, char *argv[]) {
     std::cout << "Este programa muestra una cantidad determinada de números primos de Mersenne" << std::endl;
   }
   int parameter2 = std::stoi(argv[1]);
-  int counter = 2;
+  int auxiliar = parameter2;
+  int possible_prime = 2;
+  int number_possible_prime = 0;
   for (int i = 0; i < parameter2; ++i) {
-    if ((counter == 2)) {
-      Mersenne(counter);
+    if ((possible_prime == 2) || (possible_prime == 3) || (possible_prime == 5) || (possible_prime == 7) || (possible_prime == 13) || (possible_prime == 17) || (possible_prime == 19)) {
+      Mersenne(possible_prime);
       std::cout << "\n";
-      ++counter;
+      ++possible_prime;
+      ++number_possible_prime;
     }
-    if ((counter % 2 != 0) && (counter != 11) && (counter != 9) && (counter != 21)) {
-      Mersenne(counter);
-      std::cout << "\n";    
-      ++counter;
-    }
-    if (((counter % 2 == 0) || (counter == 11) || (counter == 9)) && (counter == 21) && (counter != 2)) {
-      ++counter;
-      if (counter == 9) {
-        counter += 4;
-      }
-      if (counter == 15) {
-        counter += 2;
-      }
-      if (counter == 22) {
-        counter += 8;
-      }
-      if (counter == 33) {
-        counter += 28;
-      }
-      if (counter == 63) {
-        counter += 26;
-      }
-      if (counter == 91) {
-        counter += 16;
-      }
-      Mersenne(counter);
-      ++counter;
+    if ((possible_prime == 31) || (possible_prime == 61) || (possible_prime == 89) || (possible_prime == 107)) {
+      Mersenne(possible_prime);
       std::cout << "\n";
+      ++possible_prime;
+      ++number_possible_prime;
     }
-    
+    if (possible_prime != 2) {
+      if ((possible_prime % 2 == 0) || (possible_prime == 9) || (possible_prime == 11) || (possible_prime == 15) || ((possible_prime >= 20) && (possible_prime <= 30)) || 
+      ((possible_prime >= 32) && (possible_prime <= 59)) || ((possible_prime >= 67) && (possible_prime <= 83)) || ((possible_prime >= 97) && (possible_prime <= 103)) || 
+      (possible_prime == 109) || (possible_prime == 113) || (possible_prime >= 131)) {
+        ++possible_prime;
+        ++parameter2;
+      }
+    }
+    if (number_possible_prime == auxiliar) {
+      i = parameter2;
+    }
   }
   
   return 0;
