@@ -20,15 +20,12 @@ int main() {
   int serie_length = 0;
   std::vector<int> numbers_serie;
   // std::cout << "Introduzca la secuencia de números: ";
-  int contador = 0;
-  while (contador != 3) {
-    std::cin >> serie_length;
+  while (std::cin >> serie_length) {
     numbers_serie.reserve(serie_length);
     for (int i = 0; i < serie_length; ++i) {
       std::cin >> numbers_serie[i];
     }
     std::cout << LookingForMax(numbers_serie, serie_length) << std::endl;
-    ++contador;
   }
 
   return 0;

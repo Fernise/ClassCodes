@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <curses.h>
 std::string UpperLetters(std::string cipher_message) {
   for (int i = 0; i < cipher_message.length(); ++i) {
     cipher_message[i] = toupper(cipher_message[i]);
@@ -17,7 +17,7 @@ void Cipher(std::string message, const int rotation_positions ) { // 65 - 90 (Ca
   int real_rotation = 0;
   for (int i = 0; i < message.length(); ++i) {
     if ((message[i] != char(95)) && (message[i] >= char(97)) && (message[i] <= char(122))) {
-      real_rotation = rotation_positions % 25;
+      real_rotation = rotation_positions % 26;
       ascii_number = static_cast<int>(message[i]);
       ascii_cipher_letter = ascii_number + real_rotation;
       cipher_letter = char(ascii_cipher_letter);
@@ -47,13 +47,12 @@ void Cipher(std::string message, const int rotation_positions ) { // 65 - 90 (Ca
 
 int main() {
   // std::cout << "Este programa cifra un mensaje con el cifrado César" << std::endl;
-  for (int i = 0; i < 3; ++i) {
-    int rotation_positions = 0;
-    std::cin >> rotation_positions;
+  int rotation_positions = 0;
+  while (std::cin >> rotation_positions) {
     std::string message = "";
     std::cin >> message;
     Cipher(message, rotation_positions);
   }
-
+  
   return 0;
 }
