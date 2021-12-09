@@ -12,9 +12,7 @@
 
 #include <iostream>
 #include <string>
-#include <cmath>
-// #include "calculatearmstrong.h"
-#include "calculatearmstrong.cc"
+#include "calculate_armstrong.h"
 
 /** Main function
  *  @param[in] argc Number of command line parameters

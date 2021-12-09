@@ -1,6 +1,6 @@
-mersenne: mersenne.cc
-	g++ -o mersenne mersenne.cc
+calculate_mersenne: calculate_mersenne.o mersenne_main.o
+	g++ -o calculate_mersenne calculate_mersenne.o mersenne_main.o
 
 clean: 
-	rm -f mersenne
+	rm -f calculate_mersenne
 	rm -f *.o

@@ -6,9 +6,9 @@
  *
  * @author alu0101506371@ull.edu.es
  * @date 8.nov.2020
- * @brief This file contains the declaration of the function used in "calculatearmstron.cc"
+ * @brief This files contains the declaration of the function used in "mersenne.cc".  
  *
  */
 
-std::string CalculateArmstrong(std::string possible_armstrong);
-  
+void Usage(int argc, char *argv[]);
+void Mersenne(const int kPrimeNumber); 

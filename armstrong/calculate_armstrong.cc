@@ -13,7 +13,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include "calculatearmstrong.h"
+#include "calculate_armstrong.h"
 
 /*
  * @brief Calculate an Armstron number.
