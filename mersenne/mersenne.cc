@@ -1,9 +1,24 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author alu0101506371@ull.edu.es
+ * @date 8.nov.2020
+ * @brief This program takes from the command line a number (n) and shows the first (n) primes numbers of Mersenne.  
+ *
+ */
+
 #include <iostream>
 #include <vector>
 // #include "calculatemersenne.h"
 #include "calculatemersenne.cc"
 
-
+/** Main function
+ *  @param[in] argc Number of command line parameters
+ *  @param[in] argv Vector containing (char*) the parameters
+ */
 int main(int argc, char *argv[]) { 
   if (argc == 1) {
     std::cout << "mersenne: falta un número natural como parámetro" << std::endl;

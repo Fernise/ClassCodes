@@ -1,5 +1,24 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author alu0101506371@ull.edu.es
+ * @date 8.nov.2020
+ * @brief This program shows if a number is balanced or not. A number is balanced if the sum of the digits 
+ * in even positions is equal to the sum of the digits in odd positions.
+ *
+ */
+
 #include <iostream>
 #include <string>
+
+/*
+ * @brief Shows if a number is balanced or not. 
+ * @param int: an integer number to be examined
+ * @return true or false, depends on if the number it is balanced or not. 
+ */
 
 bool is_balanced(int n) {
   std::string balanced = " ";

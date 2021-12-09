@@ -1,6 +1,24 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author alu0101506371@ull.edu.es
+ * @date 8.nov.2020
+ * @brief This program reads sequences of real numbers and for each sequence prints its minimum, average and maximum.
+ *
+ */
+
 #include <iostream>
 #include <vector>
 
+/*
+ * @brief Calculate the minimum of a sequence of numbers.
+ * @param const vector: the vector to be examined
+ * @param const int: the length of the sequence
+ * @return The minimum of the sequence
+ */
 void Minimum(const std::vector<double>& sequence, const int sequence_length) {
   double minimun_number = sequence[0];
   for (int i = 0; i < sequence_length; ++i) {
@@ -14,7 +32,12 @@ void Minimum(const std::vector<double>& sequence, const int sequence_length) {
 
   return;
 }
-
+/*
+ * @brief Calculate the maximum of a sequence of numbers.
+ * @param const vector: the vector to be examined
+ * @param const int: the length of the sequence
+ * @return The maximum of the sequence
+ */
 void Maximum(const std::vector<double>& sequence, const int sequence_length) {
   double maximum_number = sequence[0];
   for (int i = 0; i < sequence_length; ++i) {
@@ -26,7 +49,12 @@ void Maximum(const std::vector<double>& sequence, const int sequence_length) {
 
   return;
 }
-
+/*
+ * @brief Calculate the average of a sequence of numbers.
+ * @param const vector: the vector to be examined
+ * @param const int: the length of the sequence
+ * @return The average of the sequence
+ */
 void Average(const std::vector<double>& sequence, const int sequence_length) {
   double average_number = 0;
   for (int i = 0; i < sequence_length; ++i) {

@@ -1,6 +1,26 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author alu0101506371@ull.edu.es
+ * @date 8.nov.2020
+ * @brief This program reads triples of three natural numbers and for each one computes and 
+ * prints the result of: (1 / a) + (1 / a + k) +(1 / a + 2 * k)
+ *
+ */
+
 #include <iostream>
 
-void CalculateSumOfFractions(const double kPrimerNumero, double kSegundoNumero, double kTercerNumero) {
+/*
+ * @brief Computes and prints the result of: (1 / a) + (1 / a + k) +(1 / a + 2 * k)
+ * @param const double: first number 
+ * @param const double: second number
+ * @param const double: third number
+ * @return The result of the formula
+ */
+void CalculateSumOfFractions(const double kPrimerNumero, const double kSegundoNumero, const double kTercerNumero) {
   double resultado = 0;
   bool bandera = false;
   std::cout << std::fixed;
@@ -23,9 +43,6 @@ void CalculateSumOfFractions(const double kPrimerNumero, double kSegundoNumero, 
   
   return;
 }
-
-
-
 
 int main() {
   // std::cout << "Este programa lee triples de tres números y para cada uno calcula el resultado de (1/a) + (1/a+k) + (1/a+2K)" << std::endl;

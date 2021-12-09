@@ -1,6 +1,24 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author alu0101506371@ull.edu.es
+ * @date 8.nov.2020
+ * @brief This program reads a sequence of natural numbers and prints how many of them are equal to the last one.
+ *
+ */
+
 #include <iostream>
 #include <vector>
 
+/*
+ * @brief Counts how many time a number is equal to last one in a sequence.
+ * @param vector: the string to be examined
+ * @param const int: the length of the sequence
+ * @return the amount of times one number is equal to the last one
+ */
 int RepeatsOfLastNumber(const std::vector<int>& numbers_serie, const int kAmountNumbersSerie) {
   int repeats_last_number = 0;
   for (int j = 0; j < (kAmountNumbersSerie - 1); ++j) {

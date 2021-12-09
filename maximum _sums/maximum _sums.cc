@@ -1,6 +1,26 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author alu0101506371@ull.edu.es
+ * @date 8.nov.2020
+ * @brief This program reads a sequence of natural numbers and prints the maximum quantity that can be obtained by adding 
+ * numbers consecutively from the beginning, and the maximum quantity that can be obtained by adding numbers consecutively from the end.
+ *
+ */
+
 #include <iostream>
 #include <vector>
 
+/*
+ * @brief Calculate the maximum quantity in a sequence that can be obtained by adding 
+ * numbers consecutively from the beginning and the other way around. 
+ * @param vector: the vector to be examined
+ * @param const int: the lenght of the sequence
+ * @return The maximum quantity adding numbers from the begining and the other way around
+ */
 void MaximumAdds(std::vector<int>& numbers_serie, const int kSerieLength) {
   int possible_max_add_start = 0;
   int possible_max_add_end = 0;

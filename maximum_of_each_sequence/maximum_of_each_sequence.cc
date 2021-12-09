@@ -1,5 +1,24 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author alu0101506371@ull.edu.es
+ * @date 8.nov.2020
+ * @brief This program reads various sequences of natural number and prints for each one the maximum value of it.
+ *
+ */
+
 #include <iostream>
 #include <vector>
+
+/*
+ * @brief Shows the maximum value of a sequence of numbers.
+ * @param vector: the vector to be examined
+ * @param const int: the lenght of the sequence
+ * @return The maximum number in the sequence
+ */
 
 int LookingForMax(std::vector<int>& numbers_serie, const int kSerieLength) {
   int max_number = numbers_serie[0];

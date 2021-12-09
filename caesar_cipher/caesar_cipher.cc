@@ -1,6 +1,24 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author alu0101506371@ull.edu.es
+ * @date 8.nov.2020
+ * @brief This program cipher a message with the Caesar cipher.
+ *
+ */
+
 #include <iostream>
 #include <string>
 #include <curses.h>
+
+/*
+ * @brief Turns the lowercase letters into uppercase
+ * @param string: the string to be changed
+ * @return the message in uppercase letters 
+ */
 std::string UpperLetters(std::string cipher_message) {
   for (int i = 0; i < cipher_message.length(); ++i) {
     cipher_message[i] = toupper(cipher_message[i]);
@@ -9,6 +27,12 @@ std::string UpperLetters(std::string cipher_message) {
   return cipher_message;
 }
 
+/*
+ * @brief Ciphers a message with the Caesar cipher.
+ * @param string: the string to be changed
+ * @param const int: the number of positions in the alphabet that have to be rotated
+ * @return The ciphered message
+ */
 void Cipher(std::string message, const int rotation_positions ) { // 65 - 90 (Capital)  97 - 122 (Lower)
   std::string cipher_message = "";
   char cipher_letter = 'p';
@@ -41,9 +65,6 @@ void Cipher(std::string message, const int rotation_positions ) { // 65 - 90 (Ca
 
   return;
 }
-
-
-
 
 int main() {
   // std::cout << "Este programa cifra un mensaje con el cifrado César" << std::endl;

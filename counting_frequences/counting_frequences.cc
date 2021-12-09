@@ -1,6 +1,24 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author alu0101506371@ull.edu.es
+ * @date 8.nov.2020
+ * @brief This program reads a sequence of natural numbers and for each one prints how many times it appears.
+ *
+ */
+
 #include <iostream>
 #include <vector>
 
+/*
+ * @brief Order a sequence of numbers from lower to higher.
+ * @param vector: the vector to be ordered
+ * @param const int: the lenght of the sequence
+ * @return The serie in order
+ */
 void OrderSeries(std::vector<int>& numbers_serie, const int kSerieLength) {
   int aux = 0;
   for (int i = 0; i < kSerieLength; ++i) {
@@ -16,6 +34,12 @@ void OrderSeries(std::vector<int>& numbers_serie, const int kSerieLength) {
   return;
 }
 
+/*
+ * @brief Counts the times one numbers is repeated.
+ * @param vector: the vector to be examined
+ * @param const int: the lenght of the sequence
+ * @return The times each number appears
+ */
 void TimesRepeated(std::vector<int>& numbers_serie, const int kSerieLength) {
   OrderSeries(numbers_serie, kSerieLength);
   for (int i = 0; i < kSerieLength; ++i) {

@@ -1,6 +1,24 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Informática Básica
+ *
+ * @author alu0101506371@ull.edu.es
+ * @date 8.nov.2020
+ * @brief This program reads a sequence of natural numbers and for each one prints the number of pairs of consecutive numbers 
+ * such that the second number of the pair is greater than the first one.
+ *
+ */
+
 #include <iostream> 
 #include <string>
 
+/*
+ * @brief Counts the times that in one pair of numbers the second number higher than the first one.
+ * @param string: the string to be examined
+ * @return The times each second number in a pair is higher than the first one 
+ */
 int SecondNumberGreater(const std::string sequence) {
   int first_pair_number = 0;
   int second_pair_number = 0;
